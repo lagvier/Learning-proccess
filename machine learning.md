@@ -8,6 +8,7 @@ from sklearn.preprocessing import Imputer                     # imputing missing
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder # data encoding
 from sklearn.cross_validation import train_test_split         # splitting data
 from sklearn.preprocessing import StandardScaler              # scaling
+from sklearn.linear_model import LinearRegression             # linear regression
 ```
 ### load data: free [Rdatasets](https://vincentarelbundock.github.io/Rdatasets/datasets.html)
 ``` 
@@ -57,4 +58,9 @@ regressor = LinearRegression() # regression
 #### Model fit
 ```
 model_result = regressor.fit(X_train, Y_train)
+```
+
+#### Prediction
+```
+model_predictions = model_result.predict(X_test)
 ```
